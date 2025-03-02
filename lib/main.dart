@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalog/home_page.dart';
+import 'package:flutter_catalog/pages/home_page.dart';
+import 'package:flutter_catalog/pages/login_page.dart';
 
 
 void main(){
@@ -15,7 +16,20 @@ class MyApp extends StatelessWidget {
     String name = "Codepur";
 
     return MaterialApp(
-        home:HomePage()
+       // home:HomePage(),
+        themeMode: ThemeMode.dark,
+        theme: ThemeData(
+           primarySwatch: Colors.deepPurple
+        ),
+        initialRoute: "/home",
+        darkTheme: ThemeData(
+            brightness: Brightness.light,
+        ),
+        routes: {
+            "/":(context) =>LoginPage(),
+            "/login":(context)=> LoginPage(),
+            "/home":(context)=> HomePage()
+        },
     );
   }
 }
