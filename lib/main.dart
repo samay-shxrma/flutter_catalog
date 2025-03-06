@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     String name = "Codepur";
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
        // home:HomePage(),
         themeMode: ThemeMode.dark,
         theme: ThemeData(
@@ -30,8 +32,8 @@ class MyApp extends StatelessWidget {
         ),
         routes: {
             "/":(context) =>LoginPage(),
-            "/login":(context)=> LoginPage(),
-            "/home":(context)=> HomePage()
+           MyRoutes.homeRoute:(context)=>HomePage(),
+           MyRoutes.loginRoute:(context)=>LoginPage(),
         },
     );
   }
