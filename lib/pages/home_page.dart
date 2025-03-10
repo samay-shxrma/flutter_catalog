@@ -10,10 +10,10 @@ class HomePage extends StatelessWidget {
     final String name = "Codepur";
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
-        title: Text("Catalog App",style: TextStyle(color: Colors.white),),centerTitle: true,
+      //  backgroundColor: Colors.deepPurple,
+        title: Text("Catalog App",style: TextStyle(color: Colors.black),),centerTitle: true,
         //backgroundColor: Colors.lightBlue, 92,51,172
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: IconThemeData(color: Colors.black),
       ),
             body: Center(
                 child: Container(
