@@ -10,15 +10,14 @@ class HomePage extends StatelessWidget {
     final String name = "Codepur";
     return Scaffold(
       appBar: AppBar(
-      //  backgroundColor: Colors.deepPurple,
         title: Text("Catalog App",style: TextStyle(color: Colors.black),),centerTitle: true,
-        //backgroundColor: Colors.lightBlue, 92,51,172
+    
         iconTheme: IconThemeData(color: Colors.black),
       ),
             body: Center(
-                child: Container(
-                    child: Text("Welcome to $days days of flutter by $name"),
-                ),
+              child: Container(
+                  child: Text(context.runtimeType.toString()),
+              ),
             ),
             drawer: MyDrawer(),
         );
